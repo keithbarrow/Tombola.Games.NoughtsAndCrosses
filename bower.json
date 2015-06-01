@@ -1,0 +1,25 @@
+{
+  "name": "Tombola.Games.NoughtsAndCrosses",
+  "version": "0.0.0",
+  "homepage": "https://github.com/keithbarrow/Tombola.Games.NoughtsAndCrosses",
+  "authors": [
+    "keithbarrow <keith.barrow@tombola.com>"
+  ],
+  "moduleType": [
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "noughts",
+    "and",
+    "crosses"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

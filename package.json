@@ -1,0 +1,29 @@
+{
+  "name": "Tombola.Games.NoughtsAndCrosses",
+  "version": "0.0.0",
+  "description": "Noughts and Crosses game client written in angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keithbarrow/Tombola.Games.NoughtsAndCrosses.git"
+  },
+  "keywords": [
+    "noughts",
+    "and",
+    "crosses",
+    "tic",
+    "tac",
+    "toe",
+    "client",
+    "angular"
+  ],
+  "author": "keith barrow",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/keithbarrow/Tombola.Games.NoughtsAndCrosses/issues"
+  },
+  "homepage": "https://github.com/keithbarrow/Tombola.Games.NoughtsAndCrosses"
+}
