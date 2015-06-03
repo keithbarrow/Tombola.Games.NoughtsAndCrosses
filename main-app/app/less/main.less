@@ -1,3 +1,16 @@
+@backrgound-color: #D4CDB1;
+@link-color: #7B906F;
+@link-lowlight-color: #7F7F7F;
+
 body {
-  background-color: #7B906F;
+  background-color: @backrgound-color;
+}
+
+a {
+  color:  #7B906F;;
+  text-decoration: none;
+  &:hover {
+    color:  @link-lowlight-color;
+  }
+
 }
