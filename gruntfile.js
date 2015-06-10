@@ -3,24 +3,32 @@
     var copyTask = require('./.grunt/copy-task'),
         lessTask = require('./.grunt/less-task'),
         jshintTask = require('./.grunt/jshint-task'),
-        concatTask = require('./.grunt/concat-task');
+        concatTask= require('./.grunt/concat-task'),
+        cleanTask  = require('./.grunt/clean-task');
 
     module.exports = function(grunt){
         grunt.initConfig({
             pkg: grunt.file.readJSON('package.json'),
-            copy: copyTask,
             lesslint: lessTask,
-            less: lessTask,
             jshint: jshintTask,
+            clean: cleanTask,
+            less: lessTask,
+            copy: copyTask,
             concat:concatTask
         });
-        grunt.loadNpmTasks('grunt-contrib-copy');
+
         grunt.loadNpmTasks('grunt-lesslint');
         grunt.loadNpmTasks('grunt-contrib-less');
         grunt.loadNpmTasks('grunt-contrib-jshint');
+        grunt.loadNpmTasks('grunt-contrib-clean');
         grunt.loadNpmTasks('grunt-contrib-concat');
-        grunt.registerTask('lessFiles', ['lesslint','less']);
-        grunt.registerTask('jsFiles', ['jshint','concat']);
-        grunt.registerTask('default', ['copy', 'lessFiles', 'jsFiles']);
+        grunt.loadNpmTasks('grunt-contrib-copy');
+        grunt.registerTask('lessFiles', ['lesslint','clean:mainappcss', 'less']);
+        grunt.registerTask('javascript', ['jshint','clean:mainappscripts','concat']);
+        grunt.registerTask('html', 'clean:mainapphtml', 'copy:html');
+        grunt.registerTask('images', 'clean:mainappimages', 'copy:images');
+        grunt.registerTask('sounds', 'clean:mainappsounds', 'copy:sounds');
+        grunt.registerTask('bower', 'clean:bower', 'copy:bower');
+        grunt.registerTask('default', ['clean', 'html', 'images', 'sounds', 'bower', 'lessFiles', 'javascript']);
     };
 })();

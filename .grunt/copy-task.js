@@ -1,14 +1,14 @@
 (function () {
     'use strict';
     module.exports={
-        mainappimages: {
+        images: {
             cwd:'',
             src: ['main-app/app/images/**/*.*'],
             dest: '.build/',
             expand: true
         },
 
-        mainappsounds: {
+        sounds: {
             cwd:'',
             src: ['main-app/app/sounds/*.*'],
             dest: '.build/',
